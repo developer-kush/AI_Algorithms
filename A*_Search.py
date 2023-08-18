@@ -61,7 +61,8 @@ for _ in range(m):
 
 # PRETTY OUTPUT
 print("CITY MAP")
-map = [['.' for _ in range(max(x[1] for x in cities.values())+1)] for _ in range(max(x[0] for x in cities.values())+1)]
+map = [['.' for _ in range(max(x[1] for x in cities.values())+1)] \
+       for _ in range(max(x[0] for x in cities.values())+1)]
 for city, pos in cities.items(): map[pos[0]][pos[1]] = city
 for row in map: print(*row)
 print("\nDISTANCES")
@@ -71,4 +72,4 @@ for dest in range(n):
 
 
 # ---------------------------------------------------------------------------------
-print(f"{'-'*20} {time.perf_counter()-start_time * 1000}ms {'-'*20}")
+print(f"\n{'-'*20} {time.perf_counter()-start_time * 1000}ms {'-'*20}")
